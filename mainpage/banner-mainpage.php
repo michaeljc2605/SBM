@@ -322,8 +322,8 @@
                 your product's appeal, protects during transit, and aligns with your brand identity.
             </p>
             <div class="banner-buttons">
-                <a href="#contact" class="btn-consult">Contact Us</a>
-                <a href="#cartons" class="btn-services">Our Cartons</a>
+                <a href="/SBM/contactUs.php" class="btn-consult">Contact Us</a>
+                <a href="/SBM/Cartons.php" class="btn-services">Our Cartons</a>
             </div>
         </div>
     </div>

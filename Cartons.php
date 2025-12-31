@@ -24,8 +24,10 @@
             background: linear-gradient(135deg, #B8A099 0%, #9d857c 50%, #8a6f65 100%);
             color: white;
             padding: clamp(80px, 15vh, 120px) 0 clamp(60px, 12vh, 100px);
+            padding-top: clamp(100px, 18vh, 140px);
             position: relative;
             overflow: hidden;
+            margin-top: 0;
         }
 
         .hero-section::before {
@@ -278,39 +280,11 @@
             flex-shrink: 0;
         }
 
-        /* Tablet Portrait (768px - 1023px) */
-        @media (min-width: 768px) and (max-width: 1023px) {
-            .flute-image-container {
-                width: 250px;
-                min-width: 250px;
-            }
-
-            .flute-content {
-                padding: 25px;
-            }
-        }
-
-        /* Mobile Landscape (576px - 767px) */
-        @media (min-width: 576px) and (max-width: 767px) {
-            .flute-card {
-                flex-direction: column;
-            }
-
-            .flute-image-container {
-                width: 100%;
-                height: 220px;
-                min-width: auto;
-            }
-
-            .flute-content {
-                padding: 20px;
-            }
-        }
-
         /* Mobile Portrait (up to 575px) */
         @media (max-width: 575px) {
             .hero-section {
-                padding: 70px 0 50px;
+                padding: 80px 0 50px;
+                padding-top: 90px;
             }
 
             .flute-card {
@@ -348,25 +322,6 @@
             }
         }
 
-        /* Extra Small Mobile (up to 375px) */
-        @media (max-width: 375px) {
-            .hero-section {
-                padding: 60px 0 45px;
-            }
-
-            .flute-image-container {
-                height: 180px;
-            }
-
-            .flute-content {
-                padding: 15px;
-            }
-
-            .comparison-table {
-                margin: 0 12px;
-            }
-        }
-
         /* Touch device improvements */
         @media (hover: none) and (pointer: coarse) {
             .flute-card:hover {
@@ -387,75 +342,7 @@
             }
         }
 
-        /* Landscape orientation on mobile */
-        @media (orientation: landscape) and (max-height: 500px) {
-            .hero-section {
-                padding: 50px 0 40px;
-            }
-
-            .hero-title {
-                font-size: 2rem;
-                margin-bottom: 12px;
-            }
-
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .flute-card {
-                flex-direction: row;
-            }
-
-            .flute-image-container {
-                width: 200px;
-                min-width: 200px;
-                height: auto;
-            }
-
-            .flute-content {
-                padding: 15px;
-            }
-        }
-
-        /* Reduced motion */
-        @media (prefers-reduced-motion: reduce) {
-            .flute-card,
-            .flute-image,
-            .comparison-table td {
-                transition: none;
-            }
-
-            .flute-card:hover {
-                transform: none;
-            }
-
-            .flute-card:hover .flute-image {
-                transform: none;
-            }
-        }
-
-        /* Print styles */
-        @media print {
-            .hero-section {
-                background: #B8A099 !important;
-                padding: 30px 0;
-            }
-
-            .flute-card {
-                break-inside: avoid;
-                page-break-inside: avoid;
-                box-shadow: none;
-                border: 1px solid #ddd;
-                margin-bottom: 20px;
-            }
-
-            .comparison-table {
-                box-shadow: none;
-                border: 1px solid #ddd;
-            }
-        }
-
-        /* Container padding for all sections */
+        /* Container padding */
         .container {
             padding-left: clamp(15px, 4vw, 20px);
             padding-right: clamp(15px, 4vw, 20px);
@@ -466,7 +353,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Anchor offset for fixed navbar */
+        /* Anchor offset */
         [id] {
             scroll-margin-top: 80px;
         }
@@ -634,7 +521,7 @@
             </div>
 
             <!-- BC Flute -->
-            <div class="flute-card" id="b-and-c-type">
+            <div class="flute-card" id="bandc-type">
                 <div class="flute-image-container">
                     <img src="static/b&c-flute-cardboard.jpg" alt="BC Flute" class="flute-image">
                     <div class="flute-badge">BC FLUTE</div>
@@ -787,4 +674,69 @@
             <h2 class="comparison-title">Panduan Pemilihan Karton</h2>
             <p class="comparison-subtitle">Temukan jenis karton yang paling sesuai dengan kebutuhan Anda</p>
             
-            <div class="comparison-table
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kebutuhan Anda</th>
+                            <th>Rekomendasi Karton</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="table-icon"><i class="fas fa-paint-brush"></i></span>
+                                Butuh tampilan bagus & ringan
+                            </td>
+                            <td><strong>E Flute</strong> - Permukaan halus, hasil cetak premium</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="table-icon"><i class="fas fa-truck"></i></span>
+                                Butuh aman untuk pengiriman ekspedisi
+                            </td>
+                            <td><strong>C Flute</strong> - Cushioning bagus, tahan benturan</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="table-icon"><i class="fas fa-dumbbell"></i></span>
+                                Butuh kekuatan ekstra untuk barang berat
+                            </td>
+                            <td><strong>BC Flute</strong> - Double wall, sangat kuat</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="table-icon"><i class="fas fa-balance-scale"></i></span>
+                                Butuh seimbang antara cetak & kekuatan
+                            </td>
+                            <td><strong>B Flute</strong> - Ekonomis, cetak rapi, cukup kuat</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="table-icon"><i class="fas fa-globe"></i></span>
+                                Butuh untuk ekspor internasional
+                            </td>
+                            <td><strong>BC Flute</strong> - Tahan pengiriman jarak jauh</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="table-icon"><i class="fas fa-store"></i></span>
+                                Butuh untuk display toko/retail
+                            </td>
+                            <td><strong>E Flute</strong> - Tampilan menarik, die cut detail</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="table-icon"><i class="fas fa-wallet"></i></span>
+                                Butuh solusi ekonomis & efisien
+                            </td>
+                            <td><strong>B Flute</strong> - Harga terjangkau, hemat ruang</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <?php include("mainpage/process-section.php"); ?>
+    <?php include("Footer.php"); ?>
