@@ -1,0 +1,27 @@
+# Sensitive files
+config/config.php
+.env
+*.env
+
+# Database files
+*.sql
+
+# User uploads
+/uploads/*
+!/uploads/.gitkeep
+
+# Logs
+/logs/
+*.log
+
+# Cache
+/cache/
+/tmp/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/

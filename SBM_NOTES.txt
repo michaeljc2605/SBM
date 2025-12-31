@@ -1,0 +1,13 @@
+SQL Issues
+** MYSQL Database on XAMMP is not running -> 
+tail -50 /Applications/XAMPP/xamppfiles/var/mysql/Michaels-MacBook-Pro.local.err
+
+if the error says "Can't lock aria control file... file is probably in use by another process"
+This means there's a zombie MySQL process still running that's blocking the new one from starting.->
+ps aux | grep mysql
+sudo kill -9 [PID_NUMBER]
+
+or
+
+sudo killall mysqld
+
